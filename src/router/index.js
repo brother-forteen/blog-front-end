@@ -17,11 +17,13 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-    if(cookie.getCookie('id') && cookie.getCookie('id') !== '0' || to.path === '/login'){
-        next();
-    } else {
-        next('/login');
-    }
+    // if(cookie.getCookie('id') && cookie.getCookie('id') !== '0' || to.path === '/login'){
+    //     next();
+    // } else {
+    //     next('/login');
+    // }
+
+    next();
 });
 
 export default router;

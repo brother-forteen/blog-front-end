@@ -6,7 +6,7 @@
 		 * **/
 -->
 <template>
-    <div>
+    <div class="content">
         <router-view></router-view>
     </div>
 </template>
@@ -26,5 +26,11 @@
 </script>
 
 <style lang="scss">
-
+    body{
+        background: #f9f9f9;
+    }
+    .content{
+        width: 1200px;
+        margin: 0 auto;
+    }
 </style>

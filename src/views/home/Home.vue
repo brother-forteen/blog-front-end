@@ -6,14 +6,20 @@
 		 * **/
 -->
 <template>
-    <div id="home">
-        i am home
+    <div id="home" class="home">
+        <ul>
+            <base-list></base-list>
+        </ul>
     </div>
 </template>
 
 <script>
+    import BaseList from "@/components/baseList/BaseList.vue";
     export default {
-        name: "Home"
+        name: "Home",
+        components: {
+            'base-list': BaseList
+        }
     }
 </script>
 
