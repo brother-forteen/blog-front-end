@@ -1,0 +1,32 @@
+@import "@/assets/css/common";
+.base_user_info{
+  background: #fff;
+  padding: 20px;
+  .base_user_info_title{
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid #eee;
+    &:after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 100%;
+      content: '';
+      border-bottom: 2px solid $active-orange;
+    }
+  }
+  .base_user_info_form{
+    padding-top: 20px;
+    .user{
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .logout{
+      font-size: 12px;
+    }
+  }
+}

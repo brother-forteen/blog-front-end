@@ -1,0 +1,65 @@
+@import "@/assets/css/common";
+.base_login{
+  .base_login_title{
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid #eee;
+    &:after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      content: '';
+      border-bottom: 2px solid $active-orange;
+    }
+  }
+  .base_login_form{
+    padding-top: 20px;
+    .form_item{
+      width: 100%;
+      margin-bottom: 15px;
+      .form_item_label{
+        padding-right: 8px;
+        display: inline-block;
+        font-size: 14px;
+        color: #333;
+        width: 60px;
+        text-align: right;
+      }
+      .form_item_input{
+        width: 190px;
+        height: 32px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        color: #333;
+        font-size: 14px;
+      }
+      .form_submit{
+        width: 190px;
+        margin-left: 64px;
+      }
+      &.form_tip{
+        text-align: right;
+        font-size: 12px;
+
+      }
+    }
+
+    &.register{
+      .form_item{
+        .form_item_label{
+          width: 80px;
+        }
+        .form_item_input{
+          width: 175px;
+        }
+        .form_submit{
+          width: 175px;
+          margin-left: 84px;
+        }
+      }
+    }
+  }
+}

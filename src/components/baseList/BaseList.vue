@@ -18,13 +18,17 @@
             这是一段摘要这是一段摘要这是一段摘要这是一段摘要这是一段摘要这是一段摘要这是一段摘要
         </div>
 
-        <div class="base_button">查看全文</div>
+        <base-button>查看全文</base-button>
     </li>
 </template>
 
 <script>
+    import BaseButton from "@/components/baseButton/BaseButton.vue";
     export default {
-        name: "BaseList"
+        name: "BaseList",
+        components: {
+            'base-button': BaseButton
+        }
     }
 </script>
 

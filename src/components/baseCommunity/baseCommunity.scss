@@ -1,0 +1,27 @@
+@import "@/assets/css/common";
+.base_community{
+  background: #fff;
+  padding: 20px;
+  .base_user_info_title{
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid #eee;
+    &:after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      content: '';
+      border-bottom: 2px solid $active-orange;
+    }
+  }
+  .community_list{
+    padding-top: 20px;
+    font-size: 13px;
+    color: $active-orange;
+    cursor: pointer;
+    line-height: 20px;
+  }
+}
