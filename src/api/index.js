@@ -5,10 +5,11 @@
  * **/
 
 import Axios from 'axios';
+import { BASE_URL } from './constant';
 
 const AXIOS_INSTANCE = Axios.create({
     timeout: 10000,
-    baseURL: ''
+    baseURL: BASE_URL
 });
 
 // 请求拦截器

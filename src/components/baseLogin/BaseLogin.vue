@@ -45,6 +45,8 @@
 
 <script>
     import BaseButton from "@/components/baseButton/BaseButton.vue";
+    import { register } from '@/api/api-user';
+
     export default {
         name: "BaseLogin",
         components: {
@@ -78,7 +80,16 @@
             },
 
             register(){
-                console.log('register');
+                let params = {
+                    userName: '',
+                    password: '',
+                    rePassword: ''
+                };
+                register(params).then(res => {
+
+                }).catch(err => {
+
+                })
             }
         }
     }

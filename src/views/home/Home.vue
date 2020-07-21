@@ -37,9 +37,7 @@
         },
         data(){
             return {
-                userInfo: {
-
-                }
+                userInfo: null
             }
         }
     }
