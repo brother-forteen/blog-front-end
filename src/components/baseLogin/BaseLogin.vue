@@ -23,15 +23,15 @@
         <div v-if="index === 1" class="base_login_form register">
             <div class="form_item">
                 <label class="form_item_label" for="registerUser">用户名: </label>
-                <input id="registerUser" type="text" class="form_item_input">
+                <input id="registerUser" v-model="form[1].userName" type="text" class="form_item_input">
             </div>
             <div class="form_item">
                 <label class="form_item_label" for="registerPassword">密码: </label>
-                <input id="registerPassword" type="text" class="form_item_input">
+                <input id="registerPassword" v-model="form[1].password" type="password" class="form_item_input">
             </div>
             <div class="form_item">
                 <label class="form_item_label" for="reRegisterPassword">确认密码: </label>
-                <input id="reRegisterPassword" type="text" class="form_item_input">
+                <input id="reRegisterPassword" v-model="form[1].rePassword" type="password" class="form_item_input">
             </div>
             <div class="form_item">
                 <base-button class="form_submit" @click="register">注册</base-button>
@@ -81,12 +81,12 @@
 
             register(){
                 let params = {
-                    userName: '',
-                    password: '',
-                    rePassword: ''
+                    userName: this.form[1].userName,
+                    password: this.form[1].password,
+                    rePassword: this.form[1].rePassword
                 };
                 register(params).then(res => {
-
+                    console.log(res);
                 }).catch(err => {
 
                 })
