@@ -5,7 +5,7 @@
  * **/
 
 const state = {
-
+    userInfo: sessionStorage.getItem('userInfo') && sessionStorage.getItem('userInfo') !== 0 ? JSON.parse(sessionStorage.getItem('userInfo')) : null
 };
 
 export default state;

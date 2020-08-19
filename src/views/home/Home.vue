@@ -37,7 +37,12 @@
         },
         data(){
             return {
-                userInfo: null
+
+            }
+        },
+        computed: {
+            userInfo(){
+                return this.$store.state.userInfo
             }
         }
     }

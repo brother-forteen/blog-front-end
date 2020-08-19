@@ -3,11 +3,12 @@
  * @author: wen_dell
  * @email: wendell.chen@chinaentropy.com
  * **/
+import { CHANGE_USER_INFO } from './mutations-types';
 
 const actions = {
-    // [CHANGE_ALARM_TYPE]({ commit }, obj){
-    //     commit(CHANGE_ALARM_TYPE, obj);
-    // },
+    [CHANGE_USER_INFO]({ commit }, obj){
+        commit(CHANGE_USER_INFO, obj);
+    },
 };
 
 export default actions;

@@ -3,4 +3,4 @@
  * @author: wen_dell
  * @email: wendell.chen@chinaentropy.com
  * **/
-// export const CHANGE_ALARM_TYPE = 'changeAlarmType';
+export const CHANGE_USER_INFO = 'changeUserInfo';

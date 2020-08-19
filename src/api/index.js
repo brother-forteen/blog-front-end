@@ -34,7 +34,15 @@ AXIOS_INSTANCE.interceptors.response.use(
     (response) => {
         // 对请求返回的数据做处理
         // 状态码处理
-        return response;
+        if(response.status >= 200 && response.status < 400){
+            if(response.data.code === 0){
+                return response.data;
+            }else {
+                alert(response.data.message);
+            }
+        }else {
+            alert(response.statusText)
+        }
     },
     (error) => {
         // 错误提示

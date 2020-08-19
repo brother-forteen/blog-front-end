@@ -6,11 +6,11 @@
         <div v-if="index === 0" class="base_login_form">
             <div class="form_item">
                 <label class="form_item_label" for="loginUser">用户名: </label>
-                <input id="loginUser" type="text" class="form_item_input">
+                <input id="loginUser" v-model="form[0].userName" type="text" class="form_item_input">
             </div>
             <div class="form_item">
                 <label class="form_item_label" for="loginPassword">密码: </label>
-                <input id="loginPassword" type="text" class="form_item_input">
+                <input id="loginPassword" v-model="form[0].password" type="text" class="form_item_input">
             </div>
             <div class="form_item">
                 <base-button class="form_submit" @click="login">登录</base-button>
@@ -45,7 +45,8 @@
 
 <script>
     import BaseButton from "@/components/baseButton/BaseButton.vue";
-    import { register } from '@/api/api-user';
+    import { CHANGE_USER_INFO } from '@/store/mutations-types';
+    import { register, login } from '@/api/api-user';
 
     export default {
         name: "BaseLogin",
@@ -76,17 +77,32 @@
             },
 
             login(){
+                let params = {
+                    userName: this.form[0].userName,
+                    password: this.form[0].password
+                };
 
+                login(params).then(res => {
+                    if(res){
+                        let userInfo = res.data;
+                        sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+                        this.$store.dispatch(CHANGE_USER_INFO, userInfo);
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
             },
 
             register(){
                 let params = {
                     userName: this.form[1].userName,
-                    password: this.form[1].password,
-                    rePassword: this.form[1].rePassword
+                    password: this.form[1].password
                 };
                 register(params).then(res => {
-                    console.log(res);
+                    if(res){
+                        console.log(res);
+                        this.index = 0;
+                    }
                 }).catch(err => {
 
                 })
