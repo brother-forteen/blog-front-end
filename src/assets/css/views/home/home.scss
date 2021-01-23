@@ -1,11 +1,14 @@
 @import "../../common";
-.home{
-  .user_info{
+.home {
+  .user_info {
     float: right;
     width: 300px;
   }
 
-  .home_list{
+  .home_list {
     margin-right: 320px;
+    .list {
+      margin-bottom: 20px;
+    }
   }
 }

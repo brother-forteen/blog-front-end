@@ -8,7 +8,7 @@ import Axios from 'axios';
 import { BASE_URL } from './constant';
 
 const AXIOS_INSTANCE = Axios.create({
-    timeout: 10000,
+    timeout: 10 * 1000,
     baseURL: BASE_URL
 });
 

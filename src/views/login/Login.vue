@@ -7,7 +7,6 @@
 -->
 <template>
     <div id="login" style="padding: 30px">
-<!--        <SwitchComponent v-model="value" :isTextInner="true"></SwitchComponent>-->
 
         <div class="select_box"></div>
 
@@ -37,12 +36,8 @@
 </template>
 
 <script>
-    import SwitchComponent from "../../components/switchComponent/SwitchComponent.vue";
     export default {
         name: "Login",
-        components: {
-            SwitchComponent
-        },
         data(){
             return {
                 value: true

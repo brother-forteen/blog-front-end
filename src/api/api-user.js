@@ -16,3 +16,13 @@ export const register = (opt) => {
 export const login = (opt) => {
     return AXIOS_INSTANCE.post(`${USER}/login`, opt);
 };
+
+// 退出
+export const logout = (opt) => {
+    return AXIOS_INSTANCE.get(`${USER}/logout`, {params: opt});
+};
+
+// 获取用户列表
+export const getUserList = (opt) => {
+    return AXIOS_INSTANCE.get(`${USER}/list`, {params: opt});
+}

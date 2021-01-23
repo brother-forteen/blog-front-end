@@ -13,7 +13,7 @@ module.exports = {
         assetsPublic: '/',
         proxyTable: {
             '/api': {
-                target: '192.168.1.5:8081/',
+                target: 'http://192.168.1.5:8081/',
                 changeOrigin: true,         // 是否跨域
                 // secure: false,              // 如果是https接口，需要配置这个参数
                 pathRewrite: {
@@ -25,7 +25,9 @@ module.exports = {
 
         },
         // Various Dev Server Settings
-        host: 'localhost',
+        // host: 'localhost',
+        // host: 'localhost',
+        host: '192.168.1.5',
         port: '8080',
         hot: true,
         contentBase: false,
