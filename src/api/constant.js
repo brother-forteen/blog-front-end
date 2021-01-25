@@ -10,3 +10,4 @@ export const BASE_URL = 'http://192.168.1.5:9090/';
 
 export const USER = 'admin/user';
 export const CATEGORY = 'category';
+export const ARTICLE = 'article';

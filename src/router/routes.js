@@ -8,10 +8,12 @@ import login from './router-login';
 import home from './router-home';
 import user from './router-user';
 import category from './router-category';
+import article from './router-article';
 
 export default [
     ...login,
     ...home,
     ...user,
-    ...category
+    ...category,
+    ...article
 ];
